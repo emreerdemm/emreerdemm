@@ -14,18 +14,15 @@
       }
       
       #two {
-        width: %60;
-        height: %40;
+        
       }
       
       #three {
-        width: %60;
-        height: %40;
+
       }
       
       #four {
-        width: %60;
-        height: %40;
+        
       }
       
       .header {
@@ -39,19 +36,47 @@
       }
 
       .photo_block {
-        text-align: center;
+        position: relative;
         width: 100%;
       }
 
       .photos {
         display: block;
+        position: relative;
         margin: 0 auto;
         padding: 5px;
         border-radius: 8px;
+        width: 450px;
+        height: auto;
+      }
+      
+      .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: .5s ease;
+        background-color: #008CBA;
       }
 
-      .footer_text {
-        font-size: 10px;
+      .photos:hover .overlay {
+        opacity: 1;
+      }
+
+      .text {
+        color: white;
+        font-size: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        text-align: center;
       }
 
 
@@ -67,10 +92,30 @@
        <h1>İyi ki doğdun Minik Unicornum</h1>
     
     <div class="photo_block">
-      <div class="photos"><img id="one" src="85822f37-e7b2-4cb8-8445-9c20fad6cda2.JPG" alt="hedgehog" width="350px"></div>
-      <div class="photos"><img id="two" src="d3cc00c2-8cbe-49fc-bcd4-e04628c40cf4.JPG" alt="together"></div>
-      <div class="photos"><img id="three" src="f0b8b5de-ce2e-42fc-96ce-41c0105a17f2.JPG" alt="together"></div>
-      <div class="photos"><img id="four" src="f6492231-c4ab-41eb-aa90-3b7bbdc1d908.JPG" alt="together"></div>
+      <div class="photos">
+        <img id="one" src="85822f37-e7b2-4cb8-8445-9c20fad6cda2.JPG" alt="one">
+        <div class="overlay">
+          <div class="text">Ne yazalim buraya?</div>
+        </div>
+      </div>
+      <div class="photos">
+        <img id="two" src="d3cc00c2-8cbe-49fc-bcd4-e04628c40cf4.JPG" alt="two">
+        <div class="overlay">
+          <div class="text">Ne yazalim buraya?</div>
+        </div>
+      </div>
+      <div class="photos">
+        <img id="three" src="f0b8b5de-ce2e-42fc-96ce-41c0105a17f2.JPG" alt="three">
+        <div class="overlay">
+          <div class="text">Ne yazalim buraya?</div>
+        </div>
+      </div>
+      <div class="photos">
+        <img id="four" src="f6492231-c4ab-41eb-aa90-3b7bbdc1d908.JPG" alt="four">
+        <div class="overlay">
+          <div class="text">Ne yazalim buraya?</div>
+        </div>
+      </div>
     </div>
 
     </div>
